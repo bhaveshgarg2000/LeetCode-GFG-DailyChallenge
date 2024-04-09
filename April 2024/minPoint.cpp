@@ -1,0 +1,18 @@
+int minPoints(int n, int m, vector<vector<int>> points) 
+    { 
+        // Your code goes here
+        vector<vector<int>> dp(n+1,vector<int>(m+1,INT_MAX));
+        dp[n-1][m-1] = max(1-points[n-1][m-1],1);
+        
+        for(int i=n-1;i>=0;i--){
+            for(int j=m-1;j>=0;j--){
+                if(j+1<m){
+                    dp[i][j] = min(dp[i][j],max(dp[i][j+1]-points[i][j],max(1-points[i][j],1)));
+                }
+                if(i+1<n){
+                    dp[i][j] = min(dp[i][j],max(dp[i+1][j]-points[i][j],max(1-points[i][j],1)));
+                }
+            }
+        }
+        return dp[0][0];
+    } 
