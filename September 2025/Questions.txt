@@ -1,0 +1,2 @@
+1. Daily Tasks : LeetCode
+2. Questions to Prepare for Job Switch : DSA
