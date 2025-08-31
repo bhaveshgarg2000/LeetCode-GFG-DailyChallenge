@@ -1,2 +1,5 @@
 1. Daily Tasks : LeetCode
 2. Questions to Prepare for Job Switch : DSA
+
+Questions
+1. 224. Basic Calculator [LC]
